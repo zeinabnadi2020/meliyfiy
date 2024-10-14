@@ -1,0 +1,706 @@
+* {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h1,
+h2,
+h4,
+h5.h6 {
+    font-family: "Amatic SC", sans-serif;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar {
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    justify-content: space-around;
+}
+
+
+.navbar .icon {
+    padding: 20px 0;
+}
+
+.navbar .logo p {
+    font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.navbar .logo p span {
+    font-size: 30px;
+    margin: 0;
+    color: red;
+    font-weight: bold;
+}
+
+.navbar .nav-menu a {
+    color: #000;
+    font-size: 17px;
+}
+
+.navbar .nav-menu li {
+    padding: 15px 15px;
+
+}
+
+.nav-menu ul li {
+    position: relative;
+}
+
+.nav-menu ul li::before {
+    content: "";
+    position: absolute;
+    border: 1px solid;
+    padding: 0;
+    margin: 0;
+    width: 55px;
+    bottom: 10px;
+    color: red;
+    display: none;
+}
+
+.nav-menu ul li.home::before {
+    display: block;
+}
+
+.nav-menu ul li:hover::before {
+    display: block;
+}
+
+.nav-menu ul li:hover {
+    color: #000;
+    font-weight: bolder;
+}
+
+.nav-menu ul li.home {
+    color: #000;
+    font-weight: bolder;
+}
+
+.Home {
+    background-color: #EEEEEE;
+    margin-top: 70px;
+    flex-direction: row-reverse;
+    padding: 60px 0;
+}
+
+.Home .img img {
+    width: 60%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.Home .content {
+    width: 40%;
+}
+
+.Home h1 {
+    font-size: 50px;
+}
+
+.bookbtn {
+    width: 45%;
+    justify-content: space-between;
+}
+
+.bookbtn a.first {
+    padding: 0.625rem 1.5625rem;
+    border-radius: 0px 100vh 100vh;
+    border: 3px solid;
+    height: 30px;
+    background-color: #CE1212;
+    color: #EEEEEE;
+
+}
+
+.bookbtn a.play {
+    background: white;
+    border: 6px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.bookbtn a.play i {
+    font-size: x-large;
+}
+
+.bookbtn a.play i:hover {
+    color: #CE1212;
+}
+
+.bookbtn a.play::before {
+    border-radius: 50%;
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border: 10px solid transparent;
+    padding: 0;
+    margin: 0;
+    border-top-color: #CE1212;
+    border-left-color: #CE1212;
+
+    transform: rotate(-45deg);
+    /* Replace X with your desired degree */
+    transform-origin: center;
+    /* Adjust as needed */
+
+}
+
+.Home .img img {
+    transition: transform 0.9s;
+    /* Smooth transition */
+}
+
+.Home .img img:hover {
+    animation: vibrate 0.1s infinite;
+    /* Start animation on hover */
+}
+
+@keyframes vibrate {
+    0% {
+        transform: translate(0);
+    }
+
+    25% {
+        transform: translate(-1px, 1px);
+    }
+
+    50% {
+        transform: translate(1px, -1px);
+    }
+
+    75% {
+        transform: translate(-1px, -1px);
+    }
+
+    100% {
+        transform: translate(1px, 1px);
+    }
+}
+
+.chefs {
+    background-color: #FFFFFF;
+    margin-top: 30px;
+    justify-content: space-evenly;
+}
+
+.chefs .items {
+    padding: 0 10%;
+}
+
+.chefs .items .item {
+   
+    padding: 90px 20px 0;
+    justify-content: center;
+    padding-top: 10px;
+    box-sizing: border-box;
+    transition: transform 0.5s ease;
+    position: relative;
+    overflow: hidden;
+    width: 33%;
+    
+    
+
+}
+.chefs .title-column span{
+    color: rgb(231, 12, 12);
+}
+.chefs .title-column h2{
+    font-size: 50px;
+}
+.chefs .items .item .layer {
+    background-color: #ffffff4d;
+    width: fit-content;
+    padding: 0.625rem;
+    border-radius: 0.3125rem;
+    position: absolute;
+    top: 1.875rem;
+    right: -3.125rem;
+    flex-direction: column;
+    top: 20%;
+    right: -40px;
+    transition-property: right 20px;
+    transition-duration: .5s;
+    transition-delay: .2s;
+}
+
+.chefs .items .item:hover {
+    transform: scale(1.2);
+}
+
+.chefs .items .item:hover .layer {
+    right: 20px;
+}
+
+.title-columns h2 {
+    justify-content: center;
+}
+
+.chefs .items .item img {
+    width: 100%;
+
+}
+
+.chefs .items .item i {
+    font-size: 1.125rem;
+    padding: 0.625rem 0.3125rem;
+    color: #37373f66;
+    transition: color 0.5;
+    transition-behavior: normal;
+    transition-duration: 0s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.chefs .items .item i:hover {
+    color: #37373fe6;
+}
+
+.caption {
+    justify-content: center;
+}
+
+.caption p.text {
+    text-align: center;
+    width: 70%;
+}
+
+.chefs .items .caption .cap {
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.chefs .title {
+    justify-content: space-between;
+    /* Create space between columns */
+    align-items: center;
+    /* Center items vertically */
+    margin-bottom: 30px;
+    /* Add spacing below title */
+}
+
+.title-columns {
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 100%;
+    margin: 20px 10%;
+}
+
+
+.container .image-container {
+    columns: 3 250px;
+    gap: 15px;
+    display: flow;
+}
+
+.container .image-container .photo {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.container .image-container .photo img {
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.container .image-container .photo .layer {
+    width: 100%;
+    height: 100%;
+    padding: 0.9375rem;
+    background-color: #00000096;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition-property: top 0;
+    transition-duration: .5s;
+    transition-delay: .2s;
+}
+
+.container .image-container .photo .layer p {
+    color: #ddd;
+    text-align: center;
+}
+
+.container .image-container .photo:hover img {
+    scale: 1.1;
+}
+
+.container .image-container .photo:hover .layer {
+    top: 0;
+}
+
+.container .title {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+
+.map {
+    flex-direction: column;
+    width: 100%;
+}
+.map .us{
+    color: rgb(215, 51, 51);
+}
+
+
+.map .contact1 {
+    flex-direction: column;
+    align-items: center;
+}
+.map .contact1 h2{
+    font-size: 50px;
+}
+
+.map .contact1 p {
+    margin-bottom: 0;
+}
+
+.map .contact1 h2 {
+    margin-top: 0;
+}
+
+.map .ifram {
+    width: 80%;
+    margin: auto;
+}
+
+
+/* contact info section */
+
+.contact-info {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding: 50px 10%;
+}
+
+.contact-info .row {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contact-info .row .item {
+   width: 40%;
+    background: #F5F5F5;
+    box-sizing: border-box;
+    border: 2px solid #F5F5F5;
+    padding: 10px;
+    align-items: center;
+}
+
+.contact-info .row .empty {
+    width: 2%;
+}
+
+.contact-info .row .item .col1 {
+    font-size: x-large;
+    border: 12px solid #e32222;
+    border-radius: 50%;
+    color: white;
+    background: #e32222;
+    font-size: 20px;
+}
+
+.contact-info .row .item .col2 {
+    flex-direction: column;
+    font-size: 15px;
+    padding-left: 12px;
+}
+
+.contact-info .row1 {
+    font-size: 20px;
+}
+
+
+
+.contact-form-container {
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 40px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    border: 0px solid #ccc;
+    box-sizing: border-box;
+    box-shadow: 0 0 1.875rem #00000014;
+}
+
+.form-row {
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex-direction: column;
+    flex: 1;
+
+}
+
+.form-row:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-row {
+    width: 100%;
+    justify-content: center;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #FF305B;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+
+/* contact us form */
+
+#contactus {
+    width: 100%;
+    justify-content: center;
+}
+
+.contact-form-container {
+    width: 100%;
+    justify-content: center;
+    padding: 40px 10%;
+}
+
+.contact-form {
+    width: 100%;
+    padding: 40px;
+}
+
+.form-group-name {
+    padding-right: 40px;
+}
+
+.footer {
+    width: 100%;
+    padding: 40px 10%;
+    background-image: url(images/textured-metal-background.jpg);
+  
+}
+
+.footer .col {
+   width: 25%;
+    border: 5px black;
+    color: white;
+    box-sizing: border-box;
+    padding: 0 1%;
+   
+}
+
+.footer .col2 {
+    width: 50%;
+    border: 5px black;
+    color: white;
+    box-sizing: border-box;
+    padding: 0 1%;
+    flex-direction: column;
+}
+
+.footer div img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.footer1 p :first-child {
+    font-size: 30px;
+}
+
+.social {
+    flex-direction: column;
+    width: 100%;
+}
+
+.social p {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 0;
+}
+
+.social hr {
+    width: 100%;
+}
+
+.social div {
+    width: 100%;
+    justify-content: space-around;
+}
+
+.red {
+    color: red;
+}
+
+.footer-logo .p1 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.newsletter {
+    padding-bottom: 5px;
+}
+
+.footer-li {
+    height: 30px;
+}
+
+.footer-li li {
+    width: 40%;
+}
+
+.get-in-touch p {
+    flex-wrap: nowrap;
+}
+
+.get-in-touch i {
+    margin-right: 10px;
+}
+
+.footer form input,
+.footer form button {
+    align-items: center;
+}
+
+.footer form input {
+    width: 70%;
+}
+
+.footer form button {
+    background-color: #CE1212;
+    color: #EEEEEE;
+    font-size: 0.9375rem;
+}
+
+.footer form button i {
+    margin-right: 10px;
+}
+
+
+@media screen and (min-width: 640) {
+    
+}
+.sm-100{
+    width: 100%;
+}
+.sm-50{
+width: 50%;
+}
+.sm-33{
+    width: 33.33%;
+}
+.sm-25{
+    width: 25%;
+}
+@media screen and (min-width:768) {
+    
+}
+.md-100{
+    width: 100%;
+}
+.md-50{
+width: 50%;
+}
+.md-33{
+    width: 33.33%;
+}
+.md-25{
+    width: 25%;
+}
+@media screen and (min-width:1024) {
+    
+}
+.lg-100{
+    width: 100%;
+}
+.lg-50{
+width: 50%;
+}
+.lg-33{
+    width: 33.33%;
+}
+.lg-25{
+    width: 25%;
+}
+@media screen and (min-width: 1280) {
+    
+}
+.xl-100{
+    width: 100%;
+}
+.xl-50{
+width: 50%;
+}
+.xl-33{
+    width: 33.33%;
+}
+.xl-25{
+    width: 25%;
+}
